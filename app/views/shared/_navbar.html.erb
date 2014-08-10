@@ -15,7 +15,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
         <li class="dropdown">
-        <a href="#">Facilites</a>
+        <%= link_to "Facilities", facilities_path %>
         <ul class="dropdown-menu">
           <li> <%= link_to "Library", books_path %></li>
         </ul>
@@ -23,7 +23,7 @@
 
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Information", "#" %></li>
+        <li><%= link_to "Information", information_path %></li>
         <% if signed_in? %>
           <li><%= link_to "Discussion Forum", tags_path %></li>
       <% end %>

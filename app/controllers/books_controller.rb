@@ -4,6 +4,13 @@ class BooksController < ApplicationController
     @books = Book.all
   end
 
+  def new
+    @book = Book.new
+  end
+
+  def create
+  end
+
   def show
   end
 

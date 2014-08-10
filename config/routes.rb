@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:index, :show]
   resources :follows, only: [:create, :destroy]
   resources :angers, only: [:update]
-  resources :books, only: [:index, :show, :update, :destroy]
+  resources :books, only: [:index, :new, :create, :show, :update, :destroy]
 
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/angers', to: 'angers#create', via: 'get'
@@ -24,6 +24,8 @@ Rails.application.routes.draw do
   match '/solved', to: 'posts#solved', via: 'get'
   match '/search', to: 'posts#search', via: 'get'
   match '/get_file', to: 'posts#get_file', via: 'get'
+  match '/information', to: 'static_pages#information', via: 'get'
+  match '/facilities', to: 'static_pages#facilities', via: 'get'
 
   #  get 'static_pages/home'
 
