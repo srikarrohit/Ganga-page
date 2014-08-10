@@ -15,4 +15,7 @@ class StaticPagesController < ApplicationController
   def information
   end
 
+  def activities
+  end
+
 end

@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   match '/get_file', to: 'posts#get_file', via: 'get'
   match '/information', to: 'static_pages#information', via: 'get'
   match '/facilities', to: 'static_pages#facilities', via: 'get'
+  match '/activities', to: 'static_pages#activities', via: 'get'
 
   #  get 'static_pages/home'
 

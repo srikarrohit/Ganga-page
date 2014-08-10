@@ -30,9 +30,6 @@ class PostsController < ApplicationController
     @post.user = current_user
     tag_it @post
     if @post.save
-      @post.tag_ids.each do |tag|
-        @post.follow!(User.find_by(usertype: tag))
-      end
       @post.follow!(current_user)
       flash[:success] = "Successfully lodged a complaint"
       redirect_to root_url
