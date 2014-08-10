@@ -10,12 +10,13 @@ Rails.application.routes.draw do
 
   resources :users, only:[:show]
   resources :notifications, only: [:index, :show]
-  resources :sessions, only: [:create, :delete]
+  resources :sessions, only: [:create, :destroy]
   resources :posts
   resources :comments, only: [:create, :destroy, :edit]
   resources :tags, only: [:index, :show]
   resources :follows, only: [:create, :destroy]
   resources :angers, only: [:update]
+  resources :books, only: [:index, :show, :update, :destroy]
 
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/angers', to: 'angers#create', via: 'get'
