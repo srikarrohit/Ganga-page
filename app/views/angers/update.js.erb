@@ -1,0 +1,2 @@
+$("div.angry_container.<%=@post.id%>").html("<%= escape_javascript(render partial: 'shared/existing_anger', locals: { anger: @anger }) %>")
+$("div.angry_container.<%=@post.id%>").siblings("span.avg_anger").html("Average anger level : <%=@post.avg_anger%> |&nbsp")
