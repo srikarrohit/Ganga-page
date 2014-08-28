@@ -16,17 +16,6 @@
   <% end %>
   </div>
 
-    <% @anger = Anger.find_by("user_id=? AND post_id=?", current_user.id, post.id) %>
-    <span>
-      <span class="avg_anger float_left">Average anger level : <%= post.avg_anger.round(2) %> |&nbsp</span>
-    <div class="angry_container <%=post.id%> float_left"> 
-    <% if @anger %>
-      <%= render partial: 'shared/existing_anger', locals: { anger: @anger, post: post} %>
-  <% else %>
-    <%= render partial: 'shared/new_anger', locals: { post: post } %>
-  <% end %>
-  </div>
-  </span>
   <br>
   <div class="details_container">
     <span>

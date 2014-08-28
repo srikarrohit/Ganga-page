@@ -13,18 +13,6 @@
 
 ActiveRecord::Schema.define(version: 20140810110939) do
 
-  create_table "angers", force: true do |t|
-    t.integer  "user_id",                null: false
-    t.integer  "post_id",                null: false
-    t.integer  "level",      default: 0, null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "angers", ["post_id"], name: "index_angers_on_post_id", using: :btree
-  add_index "angers", ["user_id", "post_id"], name: "index_angers_on_user_id_and_post_id", unique: true, using: :btree
-  add_index "angers", ["user_id"], name: "index_angers_on_user_id", using: :btree
-
   create_table "books", force: true do |t|
     t.string   "name",        limit: 30,                 null: false
     t.integer  "pages"
@@ -83,7 +71,6 @@ ActiveRecord::Schema.define(version: 20140810110939) do
     t.text     "content",                             null: false
     t.integer  "notifications_count", default: 0,     null: false
     t.boolean  "anonymous",           default: false, null: false
-    t.float    "avg_anger",           default: 0.0,   null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

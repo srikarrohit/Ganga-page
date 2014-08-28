@@ -8,7 +8,6 @@ class CreatePosts < ActiveRecord::Migration
       t.text :content, null: false
       t.integer :notifications_count, null: false, default: 0
       t.boolean :anonymous, null:false, default: false
-      t.float :avg_anger, null: false, default: 0
 
       t.timestamps
     end
