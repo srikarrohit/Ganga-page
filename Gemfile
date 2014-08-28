@@ -7,8 +7,6 @@ ruby '2.1.2'
 gem 'rails', '4.1.1'
 # Use postgres as the database for Active Record
 gem 'mysql2', group: :development
-# User pg for pushing on to heroku
-gem 'pg', group: :production
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.3'
 # Use Uglifier as compressor for JavaScript assets
