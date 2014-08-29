@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  establish_connection "students_1415"
 
   has_many :posts, inverse_of: :user, dependent: :destroy
   has_many :comments, inverse_of: :user, dependent: :destroy
