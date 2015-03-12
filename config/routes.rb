@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :tags, only: [:index, :show]
   resources :follows, only: [:create, :destroy]
   resources :books, only: [:index, :new, :create, :show, :update, :destroy]
+  resources :activities, only: [:litsoc, :techsoc, :schroeter]
 
   match '/signin',  to: 'sessions#new',         via: 'get'
   match '/signout', to: 'sessions#destroy',     via: 'delete'
@@ -26,9 +27,11 @@ Rails.application.routes.draw do
   match '/facilities', to: 'static_pages#facilities', via: 'get'
   match '/activities', to: 'static_pages#activities', via: 'get'
   match '/profile', to: 'users#home', via: 'get'
+  match '/activities/litsoc', to: 'activities#litsoc', via: 'get'
+  match '/activities/techsoc', to: 'activities#techsoc', via: 'get'
+  match '/activities/schroeter', to: 'activities#schroeter', via: 'get'
 
-  #  get 'static_pages/home'
-
+  #get 'static_pages/home'
   get 'static_pages/about'
   get 'static_pages/contact'
   # Example of regular route:
