@@ -1,7 +1,7 @@
 html,
 body {
   font-family: 'Open Sans', sans-serif;
-  background:#A1E9ED;
+  background:lightgrey;
   height: 100%;
   /* The html and body elements cannot have any padding or margin. */
 }
@@ -407,10 +407,22 @@ margin-bottom:20px;
 }
 .style_image
 {
-height:200px;
-width:300px;
-position:relative;
-top:-100px;
-margin-left:5%;
+margin-top:2em;
+height:16em;
 }
-
+.panel
+{
+margin-top:20px;
+}
+.imager
+{
+width:100%;
+height:100%;
+}
+@media screen and (max-height:767px)
+{
+  .style_image
+  {
+  margin-bottom:2em;
+  }
+}
